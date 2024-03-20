@@ -101,7 +101,7 @@ return (
           className="station"
         >
           <img className="triangle" src={triangle} alt="" />
-          Ivy Records
+          Raining Vibes
         </motion.div>
       </motion.div>
 
@@ -113,7 +113,7 @@ return (
           className="station"
         >
           <img className="triangle" src={triangle} alt="" />
-          H5G1 Music
+          Coding Vibes
         </motion.div>
       </motion.div>
 
@@ -137,7 +137,7 @@ return (
           className="station"
         >
           <img className="triangle" src={triangle} alt="" />
-          <span> Nice Guys </span>
+          <span> Spring Mornings </span>
         </motion.div>
       </motion.div>
 
@@ -149,7 +149,7 @@ return (
           className="station"
         >
           <img className="triangle" src={triangle} alt="" />
-          Spinnin Records
+          Dự báo thời tiết hôm nay mưa - Grey D
         </motion.div>
       </motion.div>
 
@@ -161,7 +161,7 @@ return (
           className="station"
         >
           <img className="triangle" src={triangle} alt="" />
-          StudyMD
+          Tại Vì Sao - MCK
         </motion.div>
       </motion.div>
 

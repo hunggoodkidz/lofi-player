@@ -111,14 +111,14 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
-  const IvyRecords = () => {
-    setVideo("//www.youtube.com/embed/F1B9Fk_SgI0?autoplay=1&mute=1&start=10");
-    setStationName("Ivy Records");
+  const RainingVibes = () => {
+    setVideo("//www.youtube.com/embed/MZhivjxcF-M&t?autoplay=1&mute=1&start=10");
+    setStationName("Raining Vibes");
     setYoutubeChannal(
-      "https://www.youtube.com/channel/UCv7qaGzuEfLhKxAZf4eZONg"
+      "https://www.youtube.com/@lofieveryday364"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=aLqc8TdoLJ0"
+      ""
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -141,14 +141,14 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
-  const HFiveGOneFunc = () => {
-    setVideo("//www.youtube.com/embed/lniKA4QHuxg?autoplay=1&mute=1&start=1");
-    setStationName("H5G1 Music");
+  const CodingVibes = () => {
+    setVideo("//www.youtube.com/embed/CfPxlb8-ZQ0?autoplay=1&mute=1&start=1");
+    setStationName("CodingVibes");
     setYoutubeChannal(
-      "https://www.youtube.com/channel/UCIPy2w-XdvaU73L3nAK1-0g"
+      "https://www.youtube.com/@MusictagJazz"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=-9gEgshJUuY&ab_channel=lofigeek"
+      ""
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -157,21 +157,6 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
-  const StudyMD = () => {
-    setVideo("//www.youtube.com/embed/PcxpLIv4CNU?autoplay=1&mute=1&start=1");
-    setStationName("StudyMD");
-    setYoutubeChannal(
-      "https://www.youtube.com/channel/UC5CRP-6oxYenIgBj17CkBZg"
-    );
-    setLivestream(
-      "https://www.youtube.com/watch?v=uxR_sTZnBtg&ab_channel=StudyMD"
-    );
-    playLiveStream(true);
-    setPauseScreen("unpauseScreen");
-    setPlayPause(pauseImg);
-    setBtnClass("PlayPause2");
-    setBtnClass2("playBtn2");
-  };
 
   const astralThrob = () => {
     setVideo("//www.youtube.com/embed/RJcIzUNKSQk?autoplay=1&mute=1&start=1");
@@ -215,14 +200,14 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
-  const Spinnin = () => {
-    setVideo("//www.youtube.com/embed/N65Jb683pXQ?autoplay=1&mute=1&start=0");
-    setStationName("Spinnin' Records");
+  const DuBaoThoiTietHomNayMua = () => {
+    setVideo("//www.youtube.com/embed/heMYSOZoT3c?autoplay=1&mute=1&start=0");
+    setStationName("Grey D");
     setYoutubeChannal(
-      "https://www.youtube.com/channel/UCpDJl2EmP7Oh90Vylx0dZtA"
+      "https://www.youtube.com/@St319Entertainment"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=N65Jb683pXQ&ab_channel=Spinnin%27Records"
+      ""
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -232,13 +217,13 @@ function App() {
   };
 
   const NiceGuys = () => {
-    setVideo("//www.youtube.com/embed/3n1aC2TYXIA?autoplay=1&mute=1&start=1");
-    setStationName("Nice Guys");
+    setVideo("//www.youtube.com/embed/wePMdTNW3C4?autoplay=1&mute=1&start=1");
+    setStationName("Spring Mornings");
     setYoutubeChannal(
       "https://www.youtube.com/channel/UCMmt12UKW571UWtJAgWkWqg"
     );
     setLivestream(
-      "https://www.youtube.com/watch?v=oVi5gtzTDx0&ab_channel=NiceGuys"
+      ""
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -261,26 +246,46 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
+  const TaiViSao = () => {
+    setVideo("//www.youtube.com/embed/U0Vr1zotKIo?autoplay=1&mute=1&start=10");
+    setStationName("MCK");
+    setYoutubeChannal("https://www.youtube.com/channel/UC8EB7c0E_TS4tpTQwMtv6fw");
+    setLivestream(
+      "https://www.youtube.com/watch?v=WDXPJWIgX-o&ab_channel=nostalgi"
+    );
+    playLiveStream(true);
+    setPauseScreen("unpauseScreen");
+    setPlayPause(pauseImg);
+    setBtnClass("PlayPause2");
+    setBtnClass2("playBtn2");
+  };
+
+
   return (
     <div className="interfaceContainer">
       <div className="radioContainer">
-        <div className="logo">NkacChuong</div>
+        <div className="logo">Nhạc Chuông</div>
         <div className="subHeading"></div>
         <div className="radioStationsContainer">
           <RadioStations
             Ambient={AmbientRenders}
-            Anime={animeVibe}
+            Anime={animeVibe} //
             Astral={astralThrob}
             ChillHop={ChillHiphop}
             Cow={chilledCow}
-            Spinnin={Spinnin}
-            Ivy={IvyRecords}
-            High={HFiveGOneFunc}
+            Spinnin={DuBaoThoiTietHomNayMua}
+            Ivy={RainingVibes} //
+            High={CodingVibes}//
             Lofi={LofiGirlVideo}
-            Study={StudyMD}
-            Jazz={theJazzHopCafe}
-            Nice={NiceGuys}
+            Study={TaiViSao}//
+            Jazz={theJazzHopCafe}//
+            Nice={NiceGuys}//
           />
+        </div>
+        <div className="socialsContainer2">
+          <div className="socials">
+              Dev By Hưng - Ninzy
+          </div>
         </div>
       </div>
       <div className="audioControlContainer">
@@ -305,7 +310,7 @@ function App() {
           height="140%"
           //loop= {true}
           playing={livestream}
-          volume= {0}
+          volume= {3.5}
           url={video}
         />
       </div>

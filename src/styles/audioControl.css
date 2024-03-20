@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: end;
     margin-left: 11rem;
+    margin-top: -23px;
     z-index: 1;
   }
   
