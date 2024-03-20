@@ -28,9 +28,27 @@ function App() {
 
   const [youtubeChannal, setYoutubeChannal] = useState("");
 
-  const handlePausePlaySwitch = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const className = (e.target as HTMLDivElement).className;
+  // const handlePausePlaySwitch = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  //   const className = (e.target as HTMLDivElement).className;
 
+  //   if (className === "PlayPause" || className === "playBtn") {
+  //     setPlayPause(pauseImg);
+  //     setBtnClass("PlayPause2");
+  //     setBtnClass2("playBtn2");
+  //     start();
+  //   } else if (className === "PlayPause2" || className === "playBtn2") {
+  //     setPlayPause(play);
+  //     setBtnClass("PlayPause");
+  //     setBtnClass2("playBtn");
+  //     pause();
+  //   }
+  // };
+
+  const handlePausePlaySwitch = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.preventDefault(); // Prevent default behavior of the event
+    
+    const className = (e.target as HTMLDivElement).className;
+  
     if (className === "PlayPause" || className === "playBtn") {
       setPlayPause(pauseImg);
       setBtnClass("PlayPause2");
@@ -43,8 +61,6 @@ function App() {
       pause();
     }
   };
-
-   
 
   const start = () => {
     playLiveStream(false);
@@ -269,7 +285,7 @@ function App() {
       </div>
       <div className="audioControlContainer">
         <AudioControls
-        playPause={() => handlePausePlaySwitch}
+        playPause={handlePausePlaySwitch}
         buttonClass={BtnClass}
         playPauseImage={playPauseImg}
         buttonClass2={BtnClass2}
@@ -287,9 +303,9 @@ function App() {
           className="vid"
           width="140%"
           height="140%"
-          //loop="true"
+          //loop= {true}
           playing={livestream}
-          //volume="mute"
+          volume= {0}
           url={video}
         />
       </div>

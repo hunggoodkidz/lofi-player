@@ -4,10 +4,10 @@ import ReactPlayer from "react-player";
 import mute from "../../images/mute.png";
 import volumeOn from "../../images/volumeOn.png";
 
-let lastPlayedVolume = 0;
+//let lastPlayedVolume = 0;
 
 interface AudioControlsProps {
-    playPause: () => void;
+    playPause: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
     buttonClass: string;
     playPauseImage: string;
     buttonClass2: string;
@@ -24,33 +24,50 @@ interface AudioControlsProps {
     LiveStreamAudio,
     LiveStreamPlayPause,
   }) => {
-  const handleMute = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const classNameVol = (e.target as HTMLDivElement).className;
-    if (classNameVol === "volumeOn" || classNameVol === "audioOnImg") {
-      setVolumeImg(mute);
-      setUnmute("volumeOff");
-      setUnmute2("audioOffImg");
-      lastPlayedVolume = volume;
-      setVolume(0);
-    } else if (classNameVol === "volumeOff" || classNameVol === "audioOffImg") {
-      setVolumeImg(volumeOn);
-      setUnmute("volumeOn");
-      setUnmute2("audioOnImg");
-      setVolume(lastPlayedVolume);
-    }
-  };
 
   const [muteCheck, setUnmute] = useState("volumeOn"); //unmute/mute change
   const [muteCheck2, setUnmute2] = useState("audioOnImg");
   const [volumeImg, setVolumeImg] = useState(volumeOn);
   const [volume, setVolume] = useState(0.35);
 
+  // const handleMute = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  //   const classNameVol = (e.target as HTMLDivElement).className;
+  //   if (classNameVol === "volumeOn" || classNameVol === "audioOnImg") {
+  //     setVolumeImg(mute);
+  //     setUnmute("volumeOff");
+  //     setUnmute2("audioOffImg");
+  //     lastPlayedVolume = volume;
+  //     setVolume(0);
+  //   } else if (classNameVol === "volumeOff" || classNameVol === "audioOffImg") {
+  //     setVolumeImg(volumeOn);
+  //     setUnmute("volumeOn");
+  //     setUnmute2("audioOnImg");
+  //     setVolume(lastPlayedVolume);
+  //   }
+  // };
+
+  const handleMute = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const classNameVol = (e.target as HTMLDivElement).className;
+    if (classNameVol === "volumeOn" || classNameVol === "audioOnImg") {
+      setVolumeImg(mute);
+      setUnmute("volumeOff");
+      setUnmute2("audioOffImg");
+      setVolume(0);
+    } else if (classNameVol === "volumeOff" || classNameVol === "audioOffImg") {
+      setVolumeImg(volumeOn);
+      setUnmute("volumeOn");
+      setUnmute2("audioOnImg");
+      // Set the volume to the last played volume
+      setVolume(0.35); // Assuming lastPlayedVolume is initialized to 0.35 elsewhere
+    }
+  };
+
   return (
     <div className="audioControl">
       <motion.div
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.9 }}
-        onClick={ playPause}
+        onClick={playPause}
         className={buttonClass}
       >
         <img src={playPauseImage} className={buttonClass2} alt="" />
