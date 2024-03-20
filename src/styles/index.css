@@ -33,6 +33,17 @@ html, body {
 }
 
 .radioStationsContainer{
+  height: 90%;
+  box-shadow: 1px 0px 0 white;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow-y: scroll;
+}
+
+/* .radioStationsContainer{
   width: 99%;
   height: 70%;
   box-shadow: 1px 0px 0 white;
@@ -40,8 +51,7 @@ html, body {
   display: flex;
   justify-content: end;
   z-index: 1;
-}
-
+} */
 .radioControl{
   width: 40%;
   height: 99%;
@@ -58,7 +68,7 @@ html, body {
   flex-direction: column;
   align-items: start;
   margin-right: 3px;
-  margin-top: -40px;
+
 }
 
 .socialsContainer2{
@@ -257,6 +267,20 @@ html, body {
   border-radius: 50%; /* Make slider thumb round */
 }
 
+::-webkit-scrollbar {
+  border-radius: 12px;
+  width: 1px;
+  height: 1px;
+  background-color: #ffffff1a
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  width: 1px;
+  height: 1px;
+  background-color: #dc12124d;
+}
+
 .soundDial{
   display: none;
 }
@@ -274,6 +298,8 @@ input[type=range][orient=vertical]
     border: #c7c7c7 1px solid;
     transform: rotate(270deg);
 }
+
+
 
 .soundDial::-webkit-slider-thumb {
   -webkit-appearance: none;

@@ -15,7 +15,6 @@ interface AudioControlsProps {
     LiveStreamPlayPause: boolean;
   }
 
-
   const AudioControls: React.FC<AudioControlsProps> = ({
     playPause,
     buttonClass,
