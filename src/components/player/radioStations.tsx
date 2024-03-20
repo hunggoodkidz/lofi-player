@@ -65,7 +65,7 @@ return (
           className="station"
         >
           <img className="triangle" src={triangle} alt="" />
-          Astral Throb
+          Classical Music
         </motion.div>
       </motion.div>
 
@@ -173,7 +173,7 @@ return (
           className="station"
         >
           <img className="triangle" src={triangle} alt="" />
-          The Jazz Café
+          Ai Đưa Em Về - TIA
         </motion.div>
       </motion.div>
     </div>

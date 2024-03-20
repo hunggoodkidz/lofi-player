@@ -159,11 +159,11 @@ function App() {
 
 
   const astralThrob = () => {
-    setVideo("//www.youtube.com/embed/RJcIzUNKSQk?autoplay=1&mute=1&start=1");
-    setStationName("Astral Throb");
-    setYoutubeChannal("https://www.youtube.com/c/AstralThrob");
+    setVideo("//www.youtube.com/embed/U_oxOhncGe0?autoplay=1&mute=1&start=1");
+    setStationName("Classical Genesis");
+    setYoutubeChannal("https://www.youtube.com/@classicalgenesis");
     setLivestream(
-      "https://www.youtube.com/watch?v=UedTcufyrHc&ab_channel=NightrideFM"
+      ""
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -186,12 +186,12 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
-  const theJazzHopCafe = () => {
-    setVideo("//www.youtube.com/embed/U8HBZOTZrf0?autoplay=1&mute=1&start=1");
-    setStationName("theJazz Cafe");
-    setYoutubeChannal("https://www.youtube.com/c/TheJazzHopCaf%C3%A9");
+  const AiDuaEmVe = () => {
+    setVideo("//www.youtube.com/embed/apqe_u3VJQ4?autoplay=1&mute=1&start=1");
+    setStationName("TIA");
+    setYoutubeChannal("https://www.youtube.com/channel/UCRuL_QfkA6eDBIbfvEDk9KQ");
     setLivestream(
-      "https://www.youtube.com/watch?v=-5KAN9_CzSA&ab_channel=STEEZYASFUCK"
+      ""
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -233,11 +233,11 @@ function App() {
   };
 
   const animeVibe = () => {
-    setVideo("//www.youtube.com/embed/5B7Rsw0L2r8?autoplay=1&mute=1&start=0");
+    setVideo("//www.youtube.com/embed/GNWLILeztaI?autoplay=1&mute=1&start=0");
     setStationName("AnimeVibe");
-    setYoutubeChannal("https://www.youtube.com/c/AnimeVibe");
+    setYoutubeChannal("https://www.youtube.com/@LlamaLoops");
     setLivestream(
-      "https://www.youtube.com/watch?v=WDXPJWIgX-o&ab_channel=nostalgic"
+      ""
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -278,7 +278,7 @@ function App() {
             High={CodingVibes}//
             Lofi={LofiGirlVideo}
             Study={TaiViSao}//
-            Jazz={theJazzHopCafe}//
+            Jazz={AiDuaEmVe}//
             Nice={NiceGuys}//
           />
         </div>
@@ -308,7 +308,7 @@ function App() {
           className="vid"
           width="140%"
           height="140%"
-          //loop= {true}
+          loop= {true}
           playing={livestream}
           volume= {3.5}
           url={video}
