@@ -36,7 +36,6 @@ html, body {
   height: 90%;
   box-shadow: 1px 0px 0 white;
   text-align: left;
-  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
