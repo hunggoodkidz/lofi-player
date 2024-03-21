@@ -40,8 +40,7 @@ interface AudioControlsProps {
       setUnmute("volumeOff");
       setUnmute2("audioOffImg");
       lastPlayedVolume = volume;
-      onVolumeChange(0); //trick lỏ
-      
+      onVolumeChange(0);
     } else if (classNameVol === "volumeOff" || classNameVol === "audioOffImg") {
       setVolumeImg(volumeOn);
       setUnmute("volumeOn");
@@ -78,9 +77,13 @@ interface AudioControlsProps {
           step={0.01}
           
           onChange={(event) => {
-            setVolume(event.target.valueAsNumber); // Cần phải cleancode ngay
+            if (muteCheck === "volumeOff" || muteCheck === "audioOffImg") {
+              // If volume is off, don't update the volume state or trigger volume change
+              return;
+            }
+            setVolume(event.target.valueAsNumber); // is a State
             
-            onVolumeChange(event.target.valueAsNumber);
+            onVolumeChange(event.target.valueAsNumber); // is a Prop not a State
           }}
         />
       </div> 
