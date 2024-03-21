@@ -323,6 +323,34 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
+  const TalkThatTalk = () => {
+    setVideo("//www.youtube.com/embed/k6jqx9kZgPM?autoplay=1&mute=1&start=2");
+    setStationName("Twice");
+    setYoutubeChannal("https://www.youtube.com/@JYPEntertainment");
+    setLivestream(
+      ""
+    );
+    playLiveStream(true);
+    setPauseScreen("unpauseScreen");
+    setPlayPause(pauseImg);
+    setBtnClass("PlayPause2");
+    setBtnClass2("playBtn2");
+  };
+
+  const Ditto = () => {
+    setVideo("//www.youtube.com/embed/Km71Rr9K-Bw?autoplay=1&mute=1&start=5=2");
+    setStationName("NewJeans");
+    setYoutubeChannal("https://www.youtube.com/channel/UCMki_UkHb4qSc0qyEcOHHJw");
+    setLivestream(
+      ""
+    );
+    playLiveStream(true);
+    setPauseScreen("unpauseScreen");
+    setPlayPause(pauseImg);
+    setBtnClass("PlayPause2");
+    setBtnClass2("playBtn2");
+  };
+
 
   return (
     <div className="interfaceContainer">
@@ -348,6 +376,8 @@ function App() {
             Twice={MoonlightSunrise} // TOD
             SS = {Ninety}
             NgoaiLeCuaEm = {NgoaiLeCuaEm}
+            TalkThatTalk={TalkThatTalk}
+            Ditto={Ditto}
           />
         </div>
         <div className="socialsContainer2">

@@ -20,6 +20,8 @@ interface RadioStationsProps {
     LoiChoi: () => void;
     SS: () => void;
     NgoaiLeCuaEm: () => void;
+    TalkThatTalk: () => void;
+    Ditto: () => void;
   }
   
   const RadioStations: React.FC<RadioStationsProps> = ({
@@ -40,6 +42,8 @@ interface RadioStationsProps {
     LoiChoi,
     SS,
     NgoaiLeCuaEm,
+    TalkThatTalk,
+    Ditto,
   }) => {
 return (
     <div className="radioList">
@@ -244,6 +248,30 @@ return (
         >
           <img className="triangle" src={triangle} alt="" />
           TWICE (트와이스) - MOONLIGHT SUNRISE
+        </motion.div>
+      </motion.div>
+
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 1.15 }}>
+        <motion.div
+          whileHover={{ scale: 1.09 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={TalkThatTalk}
+          className="station"
+        >
+          <img className="triangle" src={triangle} alt="" />
+          TWICE (트와이스) - Talk That Talk
+        </motion.div>
+      </motion.div>
+
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 1.15 }}>
+        <motion.div
+          whileHover={{ scale: 1.09 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={Ditto}
+          className="station"
+        >
+          <img className="triangle" src={triangle} alt="" />
+          NewJeans (뉴진스) - Ditto
         </motion.div>
       </motion.div>
     </div>
