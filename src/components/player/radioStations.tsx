@@ -16,6 +16,9 @@ interface RadioStationsProps {
     Jazz: () => void;
     Nice: () => void;
     HaNoi: () => void;
+    Twice: () => void;
+    LoiChoi: () => void;
+    SS: () => void;
   }
   
   const RadioStations: React.FC<RadioStationsProps> = ({
@@ -32,6 +35,9 @@ interface RadioStationsProps {
     Jazz,
     Nice,
     HaNoi,
+    Twice,
+    LoiChoi,
+    SS,
   }) => {
 return (
     <div className="radioList">
@@ -135,6 +141,18 @@ return (
         <motion.div
           whileHover={{ scale: 1.09 }}
           whileTap={{ scale: 0.9 }}
+          onClick={SS}
+          className="station"
+        >
+          <img className="triangle" src={triangle} alt="" />
+          <span> 90s Lofi </span>
+        </motion.div>
+      </motion.div>
+
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 0.85 }}>
+        <motion.div
+          whileHover={{ scale: 1.09 }}
+          whileTap={{ scale: 0.9 }}
           onClick={Nice}
           className="station"
         >
@@ -188,6 +206,30 @@ return (
         >
           <img className="triangle" src={triangle} alt="" />
           Obito - Hà Nội ft. VSTRA
+        </motion.div>
+      </motion.div>
+
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 1.15 }}>
+        <motion.div
+          whileHover={{ scale: 1.09 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={LoiChoi}
+          className="station"
+        >
+          <img className="triangle" src={triangle} alt="" />
+          LOI CHOI Lok Chok
+        </motion.div>
+      </motion.div>
+
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 1.15 }}>
+        <motion.div
+          whileHover={{ scale: 1.09 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={Twice}
+          className="station"
+        >
+          <img className="triangle" src={triangle} alt="" />
+          TWICE (트와이스) - MOONLIGHT SUNRISE
         </motion.div>
       </motion.div>
     </div>

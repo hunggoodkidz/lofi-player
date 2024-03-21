@@ -32,22 +32,6 @@ function App() {
   const [volume, setVolume] = useState(0.35);
 
 
-  // const handlePausePlaySwitch = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-  //   const className = (e.target as HTMLDivElement).className;
-
-  //   if (className === "PlayPause" || className === "playBtn") {
-  //     setPlayPause(pauseImg);
-  //     setBtnClass("PlayPause2");
-  //     setBtnClass2("playBtn2");
-  //     start();
-  //   } else if (className === "PlayPause2" || className === "playBtn2") {
-  //     setPlayPause(play);
-  //     setBtnClass("PlayPause");
-  //     setBtnClass2("playBtn");
-  //     pause();
-  //   }
-  // };
-
   const handlePausePlaySwitch = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.preventDefault(); // Prevent default behavior of the event
     
@@ -270,7 +254,7 @@ function App() {
   };
 
   const HaNoi = () => {
-    setVideo("//www.youtube.com/embed/OerAX-zKyvg?autoplay=1&mute=1&start=10");
+    setVideo("//www.youtube.com/embed/OerAX-zKyvg?autoplay=1&mute=1&start=1");
     setStationName("Obito");
     setYoutubeChannal("https://www.youtube.com/channel/UCJwp8w_Ru1q--tCEfrPIA6g");
     setLivestream(
@@ -282,6 +266,49 @@ function App() {
     setBtnClass("PlayPause2");
     setBtnClass2("playBtn2");
   };
+
+  const LoiChoi = () => {
+    setVideo("//www.youtube.com/embed/aCqmdPaTVSg?autoplay=1&mute=1&start=0");
+    setStationName("Wren Evans");
+    setYoutubeChannal("https://www.youtube.com/channel/UCJwp8w_Ru1q--tCEfrPIA6g");
+    setLivestream(
+      ""
+    );
+    playLiveStream(true);
+    setPauseScreen("unpauseScreen");
+    setPlayPause(pauseImg);
+    setBtnClass("PlayPause2");
+    setBtnClass2("playBtn2");
+  };
+
+  const MoonlightSunrise = () => {
+    setVideo("//www.youtube.com/embed/cKlEE_EYuNM?autoplay=1&mute=1&start=0");
+    setStationName("Twice");
+    setYoutubeChannal("https://www.youtube.com/@JYPEntertainment");
+    setLivestream(
+      ""
+    );
+    playLiveStream(true);
+    setPauseScreen("unpauseScreen");
+    setPlayPause(pauseImg);
+    setBtnClass("PlayPause2");
+    setBtnClass2("playBtn2");
+  };
+
+  const Ninety = () => {
+    setVideo("//www.youtube.com/embed/QW96aMCz6Og?autoplay=1&mute=1&start=0");
+    setStationName("90sLofi");
+    setYoutubeChannal("https://www.youtube.com/@90sLofiChillout");
+    setLivestream(
+      ""
+    );
+    playLiveStream(true);
+    setPauseScreen("unpauseScreen");
+    setPlayPause(pauseImg);
+    setBtnClass("PlayPause2");
+    setBtnClass2("playBtn2");
+  };
+
 
 
   return (
@@ -304,6 +331,9 @@ function App() {
             Jazz={AiDuaEmVe}//
             Nice={NiceGuys}//
             HaNoi={HaNoi}
+            LoiChoi={LoiChoi}
+            Twice={MoonlightSunrise} // TOD
+            SS = {Ninety}
           />
         </div>
         <div className="socialsContainer2">
