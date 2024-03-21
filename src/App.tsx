@@ -260,6 +260,20 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
+  const HaNoi = () => {
+    setVideo("//www.youtube.com/embed/OerAX-zKyvg?autoplay=1&mute=1&start=10");
+    setStationName("Obito");
+    setYoutubeChannal("https://www.youtube.com/channel/UCJwp8w_Ru1q--tCEfrPIA6g");
+    setLivestream(
+      ""
+    );
+    playLiveStream(true);
+    setPauseScreen("unpauseScreen");
+    setPlayPause(pauseImg);
+    setBtnClass("PlayPause2");
+    setBtnClass2("playBtn2");
+  };
+
 
   return (
     <div className="interfaceContainer">
@@ -280,6 +294,7 @@ function App() {
             Study={TaiViSao}//
             Jazz={AiDuaEmVe}//
             Nice={NiceGuys}//
+            HaNoi={HaNoi}
           />
         </div>
         <div className="socialsContainer2">
@@ -310,7 +325,8 @@ function App() {
           height="140%"
           loop= {true}
           playing={livestream}
-          volume= {3.5}
+          muted={false}
+          //volume= {0}
           url={video}
         />
       </div>
