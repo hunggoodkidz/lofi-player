@@ -309,6 +309,19 @@ function App() {
     setBtnClass2("playBtn2");
   };
 
+  const NgoaiLeCuaEm = () => {
+    setVideo("//www.youtube.com/embed/q2YUtZum9wc?autoplay=1&mute=1&start=5");
+    setStationName("Phương Ly");
+    setYoutubeChannal("https://www.youtube.com/channel/UCVfTp0vAXnuDL8SSI8tPYGA");
+    setLivestream(
+      ""
+    );
+    playLiveStream(true);
+    setPauseScreen("unpauseScreen");
+    setPlayPause(pauseImg);
+    setBtnClass("PlayPause2");
+    setBtnClass2("playBtn2");
+  };
 
 
   return (
@@ -334,6 +347,7 @@ function App() {
             LoiChoi={LoiChoi}
             Twice={MoonlightSunrise} // TOD
             SS = {Ninety}
+            NgoaiLeCuaEm = {NgoaiLeCuaEm}
           />
         </div>
         <div className="socialsContainer2">

@@ -19,6 +19,7 @@ interface RadioStationsProps {
     Twice: () => void;
     LoiChoi: () => void;
     SS: () => void;
+    NgoaiLeCuaEm: () => void;
   }
   
   const RadioStations: React.FC<RadioStationsProps> = ({
@@ -38,6 +39,7 @@ interface RadioStationsProps {
     Twice,
     LoiChoi,
     SS,
+    NgoaiLeCuaEm,
   }) => {
 return (
     <div className="radioList">
@@ -206,6 +208,18 @@ return (
         >
           <img className="triangle" src={triangle} alt="" />
           Obito - Hà Nội ft. VSTRA
+        </motion.div>
+      </motion.div>
+
+      <motion.div animate={{ opacity: [0, 1] }} transition={{ delay: 1.15 }}>
+        <motion.div
+          whileHover={{ scale: 1.09 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={NgoaiLeCuaEm}
+          className="station"
+        >
+          <img className="triangle" src={triangle} alt="" />
+          Ngoại Lệ Của Em - Phương Ly
         </motion.div>
       </motion.div>
 
