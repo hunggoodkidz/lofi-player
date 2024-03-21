@@ -4,7 +4,7 @@ import ReactPlayer from "react-player";
 import mute from "../../images/mute.png";
 import volumeOn from "../../images/volumeOn.png";
 
-//let lastPlayedVolume = 0;
+let lastPlayedVolume = 0;
 
 interface AudioControlsProps {
     playPause: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
@@ -13,6 +13,8 @@ interface AudioControlsProps {
     buttonClass2: string;
     LiveStreamAudio: string;
     LiveStreamPlayPause: boolean;
+    onVolumeChange: (volume: number) => void;
+    volume: number;
   }
 
   const AudioControls: React.FC<AudioControlsProps> = ({
@@ -22,28 +24,14 @@ interface AudioControlsProps {
     buttonClass2,
     LiveStreamAudio,
     LiveStreamPlayPause,
+    onVolumeChange,
   }) => {
 
   const [muteCheck, setUnmute] = useState("volumeOn"); //unmute/mute change
   const [muteCheck2, setUnmute2] = useState("audioOnImg");
   const [volumeImg, setVolumeImg] = useState(volumeOn);
+  //const [mute2, setMute2] = useState(mute);
   const [volume, setVolume] = useState(0.35);
-
-  // const handleMute = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-  //   const classNameVol = (e.target as HTMLDivElement).className;
-  //   if (classNameVol === "volumeOn" || classNameVol === "audioOnImg") {
-  //     setVolumeImg(mute);
-  //     setUnmute("volumeOff");
-  //     setUnmute2("audioOffImg");
-  //     lastPlayedVolume = volume;
-  //     setVolume(0);
-  //   } else if (classNameVol === "volumeOff" || classNameVol === "audioOffImg") {
-  //     setVolumeImg(volumeOn);
-  //     setUnmute("volumeOn");
-  //     setUnmute2("audioOnImg");
-  //     setVolume(lastPlayedVolume);
-  //   }
-  // };
 
   const handleMute = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const classNameVol = (e.target as HTMLDivElement).className;
@@ -51,13 +39,14 @@ interface AudioControlsProps {
       setVolumeImg(mute);
       setUnmute("volumeOff");
       setUnmute2("audioOffImg");
-      setVolume(0);
+      lastPlayedVolume = volume;
+      onVolumeChange(0); //trick lỏ
+      
     } else if (classNameVol === "volumeOff" || classNameVol === "audioOffImg") {
       setVolumeImg(volumeOn);
       setUnmute("volumeOn");
       setUnmute2("audioOnImg");
-      // Set the volume to the last played volume
-      setVolume(0.35); // Assuming lastPlayedVolume is initialized to 0.35 elsewhere
+      onVolumeChange(lastPlayedVolume);
     }
   };
 
@@ -87,15 +76,18 @@ interface AudioControlsProps {
           max={1}
           value={volume}
           step={0.01}
+          
           onChange={(event) => {
-            setVolume(event.target.valueAsNumber);
+            setVolume(event.target.valueAsNumber); // Cần phải cleancode ngay
+            
+            onVolumeChange(event.target.valueAsNumber);
           }}
         />
-      </div>
+      </div> 
       <ReactPlayer
         className="liveStreamPlayer"
         playing={LiveStreamPlayPause}
-        volume={volume}
+        volume={volume} //setVolume
         url={LiveStreamAudio}
       />
     </div>

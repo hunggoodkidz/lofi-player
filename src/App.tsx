@@ -12,6 +12,7 @@ import pauseImg from "./images/pause.png";
 import ReactPlayer from "react-player";
 
 
+
 function App() {
   const [BtnClass, setBtnClass] = useState("PlayPause"); //pause play change
   const [BtnClass2, setBtnClass2] = useState("playBtn");
@@ -27,6 +28,9 @@ function App() {
 
 
   const [youtubeChannal, setYoutubeChannal] = useState("");
+
+  const [volume, setVolume] = useState(0.35);
+
 
   // const handlePausePlaySwitch = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
   //   const className = (e.target as HTMLDivElement).className;
@@ -60,6 +64,11 @@ function App() {
       setBtnClass2("playBtn");
       pause();
     }
+  };
+
+  const handleVolumeChange = (newVolume: number) => {
+    // Function to handle volume change
+    setVolume(newVolume); // Update volume state
   };
 
   const start = () => {
@@ -132,7 +141,7 @@ function App() {
     setStationName("ChillHop Music");
     setYoutubeChannal("https://www.youtube.com/c/Chillhopdotcom/videos");
     setLivestream(
-      "https://www.youtube.com/watch?v=7NOSDKb0HlU&ab_channel=ChillhopMusic"
+      ""
     );
     playLiveStream(true);
     setPauseScreen("unpauseScreen");
@@ -311,6 +320,8 @@ function App() {
         buttonClass2={BtnClass2}
         LiveStreamAudio={currentLivestream}
         LiveStreamPlayPause={livestream}
+        volume={volume} // Pass the volume state to AudioControls
+        onVolumeChange={handleVolumeChange} // Pass the volume change handler
         />
       </div>
       <div className={pauseScreen}>
@@ -325,8 +336,8 @@ function App() {
           height="140%"
           loop= {true}
           playing={livestream}
-          muted={false}
-          //volume= {0}
+          //muted={false}
+          volume= {volume} //
           url={video}
         />
       </div>
