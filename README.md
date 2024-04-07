@@ -22,10 +22,10 @@ Typscript, React JS, Vite JS, CSS, React Player
 ## Screenshot
 
 <p>
-<img src="images/images1.png"/> 
+<img src="images/image1.png"/> 
 </p>
 <p>
-<img src="images/images2.png"/> 
+<img src="images/image2.png"/> 
 </p>
 
 ## Author(s)
